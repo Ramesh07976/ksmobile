@@ -1,0 +1,101 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="fix_btn">
+        <button type="button" class="btn btn-success btn-rounded waves-effect waves-light" data-toggle="tooltip" data-placement="right" title="" data-original-title="Contact Form">Contact Now</button>
+    </div>
+    <div class="main_contact_form my_form d-block d-lg-block d-md-block d-sm-block">
+        <div class="card">
+            <div class="card-body px-lg-5">
+               <form>
+                
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enter Mobile Number</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enter Email id</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Enter Your Quiry</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+            </div>
+        </div>
+        <div class="hider_form_box" style="display: none;">
+            <span id="frm_hdr_box"><i class="fas fa-chevron-left  animated tada infinite" style="overflow: hidden;"><span style="color: aliceblue;">X</span></i></span>
+        </div>
+    </div>
+
+    <style>
+
+.fix_btn {
+    position: fixed;
+    top: 236px;
+    right: -20px;
+    z-index: 9;
+    transform: rotate(270deg);
+    transform: translate(270deg);
+}
+label{
+    color:#000;
+}
+
+.main_contact_form {
+    position: fixed;
+    top: 121px;
+    z-index: 9;
+    width: 364px;
+    margin-left: -364px;
+    transition: .5s
+}
+
+.dstyleform {
+    position: fixed;
+    top: 121px;
+    z-index: 999;
+    right: 0px;
+    width: 364px;
+    transition: -5s;
+}
+.hider_form_box {
+    position: absolute;
+    right: 364px;
+    top: 185px;
+    height: 30px;
+    width: 30px;
+    background: red;
+}
+      </style>
+
+      <script>
+
+    $(document).ready(function() {
+        $('.fix_btn').click(function() {
+            $('.my_form').removeClass('main_contact_form').addClass('dstyleform');
+            $('.fix_btn').hide();
+            $('.hider_form_box').show();
+        });
+
+        $('.hider_form_box').click(function() {
+            $('.my_form').removeClass('dstyleform').addClass('main_contact_form');
+            $('.fix_btn').show();
+            $('.hider_form_box').hide();
+        });
+    });
+
+
+
+    
+        </Script>
